@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: caeduard <caeduard>                        +#+  +:+       +#+        */
+/*   By: caeduard <caeduard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 01:11:51 by caeduard          #+#    #+#             */
-/*   Updated: 2023/10/18 03:15:58 by caeduard         ###   ########.fr       */
+/*   Updated: 2023/10/21 03:42:48 by caeduard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void Span::addNumber(unsigned int n) {
     }
     srand(time(NULL));
     for (unsigned int i = 0; i < n; ++i) {
-        int num = rand() % 200001 - 100000;
+        int num = rand() % 10000;
         numbers.push_back(num);
     }
     std::cout << "Numbers added: ";
