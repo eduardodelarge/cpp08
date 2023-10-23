@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: caeduard <caeduard>                        +#+  +:+       +#+        */
+/*   By: caeduard <caeduard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 01:11:53 by caeduard          #+#    #+#             */
-/*   Updated: 2023/10/18 03:08:40 by caeduard         ###   ########.fr       */
+/*   Updated: 2023/10/23 10:24:02 by caeduard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,20 +22,20 @@
 class Span {
     
     private:
-    unsigned int maxInt;
-    std::vector<int> numbers;
+        unsigned int maxInt;
+        std::vector<int> numbers;
     
     public:
-    Span();
-    Span(unsigned int n);
-    Span(const Span& other);
-    ~Span();
-    
-    Span& operator=(const Span& other);
-    
-    void addNumber(unsigned int n);
-    int shortestSpan();
-    int longestSpan();
+        Span();
+        Span(unsigned int n);
+        Span(const Span& other);
+        ~Span();
+        
+        Span& operator=(const Span& other);
+        
+        void addNumber(unsigned int n);
+        int shortestSpan();
+        int longestSpan();
 };
 
 #endif

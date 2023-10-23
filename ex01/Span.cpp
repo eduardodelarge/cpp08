@@ -6,13 +6,13 @@
 /*   By: caeduard <caeduard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 01:11:51 by caeduard          #+#    #+#             */
-/*   Updated: 2023/10/21 03:42:48 by caeduard         ###   ########.fr       */
+/*   Updated: 2023/10/23 10:39:51 by caeduard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
 
-Span::Span() : maxInt(0) {}
+Span::Span(){}
 
 Span::Span(unsigned int n) : maxInt(n) {}
 
