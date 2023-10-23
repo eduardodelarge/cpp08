@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: caeduard <caeduard@student.42.fr>          +#+  +:+       +#+         #
+#    By: caeduard <caeduard>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/26 12:39:45 by caeduard          #+#    #+#              #
-#    Updated: 2023/10/21 05:06:10 by caeduard         ###   ########.fr        #
+#    Updated: 2023/10/21 23:12:11 by caeduard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ BUILD_DIR = build
 SRCS = $(wildcard $(SRC_DIR)/*.cpp)
 OBJS = $(patsubst $(SRC_DIR)/%.cpp,$(BUILD_DIR)/%.o,$(SRCS))
 
-EXECUTABLE = Span
+EXECUTABLE = mutant
 
 .PHONY: all clean fclean re
 
