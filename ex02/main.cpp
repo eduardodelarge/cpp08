@@ -6,7 +6,7 @@
 /*   By: caeduard <caeduard>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 06:26:01 by caeduard          #+#    #+#             */
-/*   Updated: 2023/10/21 23:43:13 by caeduard         ###   ########.fr       */
+/*   Updated: 2023/10/24 03:57:01 by caeduard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,16 +38,15 @@ int main() {
 
     ++it;
     --it;
+    std::cout << "Iterating through the stack.." << std::endl;
     while (it != ite) {
         std::cout << *it << std::endl;
         ++it;
     }
     
-    std::stack<int> stack(mstack);
-    
     std::cout << "Comparing mutant stack with list output: " << std::endl;
-    std::cout << "Top element: " << stack.top() << std::endl;
-    std::cout << "Size: " << stack.size() << std::endl;
+    std::cout << "Top element: " << mstack.top() << std::endl;
+    std::cout << "Size: " << mstack.size() << std::endl;
     
     std::list<int> list(mstack.begin(), mstack.end());
     std::cout << "Top element: " << list.back() << std::endl;

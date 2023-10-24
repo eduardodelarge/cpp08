@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: caeduard <caeduard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: caeduard <caeduard>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 01:11:49 by caeduard          #+#    #+#             */
-/*   Updated: 2023/10/23 11:36:09 by caeduard         ###   ########.fr       */
+/*   Updated: 2023/10/24 03:14:31 by caeduard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,20 @@ int main() {
     try {
         Span span;
         span.addNumber(100);
+        int shortest = span.shortestSpan();
+        int longest = span.longestSpan();
+
+        std::cout << "Shortest span: " << shortest << std::endl;
+        std::cout << "Longest span: " << longest << std::endl;
+    } catch (const std::exception& e) {
+        std::cerr << "Error: " << e.what() << std::endl;
+    }
+
+    std::cout << "---------- Error test ----------" << std::endl;
+    try {
+        Span(5);
+        Span span;
+        span.addNumber(10);
         int shortest = span.shortestSpan();
         int longest = span.longestSpan();
 

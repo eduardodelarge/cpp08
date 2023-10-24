@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: caeduard <caeduard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: caeduard <caeduard>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 01:11:51 by caeduard          #+#    #+#             */
-/*   Updated: 2023/10/23 10:39:51 by caeduard         ###   ########.fr       */
+/*   Updated: 2023/10/24 03:27:49 by caeduard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 Span::Span(){}
 
-Span::Span(unsigned int n) : maxInt(n) {}
+Span::Span(unsigned int n) {
+    maxInt = n;
+    std::cout << "Max int: " << maxInt << std::endl;
+}
 
 Span::Span(const Span& other) {
     *this = other;
@@ -31,17 +34,17 @@ Span& Span::operator=(const Span& other) {
 }
 
 void Span::addNumber(unsigned int n) {
-    if (numbers.size() == maxInt) {
-        throw std::runtime_error("Cannot add more numbers");
+    if (n > maxInt) {
+        throw std::runtime_error("AddNumber value is bigger than max size of vector");
     }
-    srand(time(NULL));
+    std::srand(std::time(NULL));
     for (unsigned int i = 0; i < n; ++i) {
-        int num = rand() % 10000;
-        numbers.push_back(num);
+    int num = std::rand() % 10000;
+    numbers.push_back(num);
     }
     std::cout << "Numbers added: ";
     for (unsigned int i = 0; i < n; ++i) {
-        std::cout << numbers[i] << " ";
+        std::cout << "[" << numbers[i] << "]" << "";
     }
     std::cout << std::endl;
 }
