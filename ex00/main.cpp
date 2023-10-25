@@ -6,41 +6,42 @@
 /*   By: caeduard <caeduard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 01:01:13 by caeduard          #+#    #+#             */
-/*   Updated: 2023/10/23 09:45:48 by caeduard         ###   ########.fr       */
+/*   Updated: 2023/10/25 04:08:19 by caeduard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "easyfind.hpp"
-#include <vector>
-#include <list>
 
 int main() {
+    // Test with vector
+    std::vector<int> intVector;
+    intVector.push_back(1);
+    intVector.push_back(2);
+    intVector.push_back(3);
+    intVector.push_back(4);
+    intVector.push_back(5);
+    int valueToFind = 3;
+    easyfind(intVector, valueToFind);
 
-    std::vector<int> v;
-    std::list<int> l;
-    
-    for (int i = 0; i < 10; ++i) {
-        v.push_back(i); // Create a vector with 0-9
-        l.push_back(i); // Create a list with 0-9
-    }
-    
-    try { // Try to find 5 and 21 in vector and list
-        std::cout << easyfind(v, 5) << std::endl;
-        std::cout << easyfind(v, 6) << std::endl;
-        std::cout << easyfind(v, 21) << std::endl;
-    }
-    catch (std::exception& e) {
-        std::cout << "Error: " << e.what() << std::endl;
-    }
+    // Test with list
+    std::list<int> intList;
+    intList.push_back(10);
+    intList.push_back(20);
+    intList.push_back(30);
+    intList.push_back(40);
+    intList.push_back(50);
+    valueToFind = 25;
+    easyfind(intList, valueToFind);
 
-    try { // Try to find 5 and 21 in vector and list
-        std::cout << easyfind(l, 1) << std::endl;
-        std::cout << easyfind(v, 9) << std::endl;
-        std::cout << easyfind(l, 21) << std::endl;
-    }
-    catch (std::exception& e) {
-        std::cout << "Error: " << e.what() << std::endl;
-    }
-    
+    // Test with set (not supported by easyfind, should return false)
+    std::set<int> intSet;
+    intSet.insert(10);
+    intSet.insert(20);
+    intSet.insert(30);
+    intSet.insert(40);
+    intSet.insert(50);
+    valueToFind = 30;
+    easyfind(intSet, valueToFind);
+
     return 0;
 }
