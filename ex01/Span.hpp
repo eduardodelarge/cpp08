@@ -6,7 +6,7 @@
 /*   By: caeduard <caeduard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 01:11:53 by caeduard          #+#    #+#             */
-/*   Updated: 2023/10/25 04:36:38 by caeduard         ###   ########.fr       */
+/*   Updated: 2023/10/25 08:55:10 by caeduard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,5 @@ class Span {
         int longestSpan();
 };
 
-std::ostream& operator<<(std::ostream& os, const Span& span);
 
 #endif
